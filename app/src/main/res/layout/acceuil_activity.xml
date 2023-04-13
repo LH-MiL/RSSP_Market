@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arr_plan_degrade"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="RSSP Market"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+                >
+    </TextView>
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@raw/chariot_gif">
+    </pl.droidsonroids.gif.GifImageView>
+    <TextView
+        android:id="@+id/chargement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="chrono"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+    </TextView>
+<ProgressBar
+    android:id="@+id/progressChargement"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+    ></ProgressBar>
+</LinearLayout>
