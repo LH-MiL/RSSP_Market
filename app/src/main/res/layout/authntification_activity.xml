@@ -11,13 +11,21 @@
     android:gravity="center"
     >
     <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/chariot"
         >
     </ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RSSP Market"
+        android:textSize="20sp"
+        android:gravity="center"></TextView>
     <EditText
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="120dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/arr_plan_arrondi"
@@ -68,29 +76,29 @@
         android:gravity="bottom"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:onClick="partager"
             android:src="@drawable/icon_partager"></ImageView>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_web"></ImageView>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_maps"></ImageView>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_appel"></ImageView>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_youtube"></ImageView>
 

@@ -15,7 +15,8 @@
             android:parentActivityName=".acceuil"
             android:label="Authentification"
             android:name=".authntification"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:label="Acceuil"
             android:name=".acceuil"
