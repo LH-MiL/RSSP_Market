@@ -1,14 +1,15 @@
 package com.example.rsspmarket
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class authntification : AppCompatActivity() {
+class Authentification : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.authntification_activity)
+        setContentView(R.layout.authentification_activity)
     }
 
     fun partager(view: View) {
@@ -17,6 +18,12 @@ class authntification : AppCompatActivity() {
         shareIntent.type ="text/plain"
         shareIntent.putExtra(Intent.EXTRA_TEXT, message)
         startActivity(Intent.createChooser(shareIntent, "Partager via"))
+
+    }
+
+    fun seConnecter(view: View) {
+        MediaPlayer.create(this,R.raw.open_door_1)
+
 
     }
 

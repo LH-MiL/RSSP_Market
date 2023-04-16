@@ -7,13 +7,13 @@ import android.os.CountDownTimer
 import android.widget.ProgressBar
 import android.widget.TextView
 
-class acceuil : AppCompatActivity() {
+class Acceuil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.acceuil_activity)
         val chrono=findViewById<TextView>(R.id.chargement)
         val progress=findViewById<ProgressBar>(R.id.progressChargement)
-        val intent=Intent(this,authntification::class.java)
+        val intent=Intent(this,Authentification::class.java)
         object: CountDownTimer(2000L,20L){
             override fun onTick(millisUntilFinished: Long) {
                 val i=((2000-millisUntilFinished)/20).toInt()

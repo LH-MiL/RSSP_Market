@@ -12,14 +12,14 @@
         android:theme="@style/Theme.RSSPMarket"
         tools:targetApi="31">
         <activity
-            android:parentActivityName=".acceuil"
+            android:parentActivityName=".Acceuil"
             android:label="Authentification"
-            android:name=".authntification"
+            android:name=".Authentification"
             android:exported="false"
             />
         <activity
             android:label="Acceuil"
-            android:name=".acceuil"
+            android:name=".Acceuil"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
