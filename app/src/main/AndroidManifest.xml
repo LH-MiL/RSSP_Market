@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,17 +14,22 @@
         android:theme="@style/Theme.RSSPMarket"
         tools:targetApi="31">
         <activity
-            android:parentActivityName=".Acceuil"
-            android:label="Authentification"
+            android:name=".Produit"
+            android:exported="false" />
+        <activity
             android:name=".Authentification"
             android:exported="false"
-            />
+            android:label="Authentification"
+            android:parentActivityName=".Acceuil"
+            android:screenOrientation="portrait" />
         <activity
-            android:label="Acceuil"
             android:name=".Acceuil"
-            android:exported="true">
+            android:exported="true"
+            android:label="Acceuil"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

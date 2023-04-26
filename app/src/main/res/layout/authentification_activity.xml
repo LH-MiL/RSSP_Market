@@ -49,7 +49,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:onClick="seConnecter"
+            android:id="@+id/seConnecter"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -83,21 +83,25 @@
             android:onClick="partager"
             android:src="@drawable/icon_partager"></ImageView>
         <ImageView
+            android:onClick="webOpen"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_web"></ImageView>
         <ImageView
+            android:onClick="maps"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_maps"></ImageView>
         <ImageView
+            android:onClick="appel"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/icon_appel"></ImageView>
         <ImageView
+            android:id="@+id/youtube"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
