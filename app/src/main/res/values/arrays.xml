@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="villes">
+        <item>Marrakech</item>
+        <item>Agadir</item>
+        <item>Casablanca</item>
+        <item>Ait Ourir</item>
+    </string-array>
+</resources>

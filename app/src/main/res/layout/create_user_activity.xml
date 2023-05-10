@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="@drawable/arr_plan_degrade"
+    android:padding="15dp">
+    <EditText
+        android:paddingRight="15dp"
+        android:id="@+id/email"
+        android:drawableStart="@drawable/icon_email"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/arr_plan_arrondi"
+        android:hint="  example@ensa.ac.ma"
+        android:inputType="textEmailAddress"
+        ></EditText>
+    <EditText
+        android:paddingRight="15dp"
+        android:id="@+id/password"
+        android:drawableStart="@drawable/icon_password"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/arr_plan_arrondi"
+        android:hint="  Mot de passe"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        ></EditText>
+    <EditText
+        android:paddingRight="15dp"
+        android:id="@+id/confirmedPassword"
+        android:drawableStart="@drawable/icon_password"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/arr_plan_arrondi"
+        android:hint="  Confirmation de mot de passe"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        ></EditText>
+    <EditText
+        android:paddingRight="15dp"
+        android:id="@+id/NomPrenom"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/arr_plan_arrondi"
+        android:hint="Nom et Prénom"
+        android:layout_marginTop="20dp"
+        ></EditText>
+    <Spinner
+        android:id="@+id/ville"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/arr_plan_arrondi"
+        android:layout_marginTop="20dp"
+        android:entries="@array/villes"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        ></Spinner>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:drawableStart="@drawable/icon_camera"
+            android:layout_marginRight="5dp"
+            android:onClick="Camera"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Caméra"
+            android:background="@drawable/arr_plan_arrondi"></Button>
+        <Button
+            android:layout_marginLeft="5dp"
+            android:onClick="Parcourir"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Parcourir"
+            android:background="@drawable/arr_plan_arrondi"></Button>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/arr_plan_arrondi"
+        android:text="Enregistrer"
+        android:gravity="center"
+        android:onClick="createNewUser"></Button>
+
+
+
+</LinearLayout>

@@ -10,12 +10,14 @@ import android.os.Vibrator
 import android.util.Patterns
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 
 class Authentification : AppCompatActivity() {
-val auth= FirebaseAuth.getInstance()
+lateinit var auth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.authentification_activity)
@@ -28,11 +30,19 @@ val auth= FirebaseAuth.getInstance()
         }
        val seConnecter=findViewById<Button>(R.id.seConnecter)
         seConnecter.setOnClickListener(){
+            val email=findViewById<EditText>(R.id.email).text.toString()
+            val password=findViewById<EditText>(R.id.password).text.toString()
+            auth=FirebaseAuth.getInstance()
+            auth.createUserWithEmailAndPassword(email,password)
+                .addOnCompleteListener {
+                    if(it.isSuccessful) Toast.makeText(this,"Yes",Toast.LENGTH_LONG).show()
+                    else Toast.makeText(this,it.exception.toString(),Toast.LENGTH_LONG).show()
+                }
 
-            val sharedPref = getSharedPreferences("RSSP", Context.MODE_PRIVATE)
-            val editeur = sharedPref.edit()
-            editeur.putBoolean("estConnecte",true)
-            editeur.apply()
+            //val sharedPref = getSharedPreferences("RSSP", Context.MODE_PRIVATE)
+            //val editeur = sharedPref.edit()
+            //editeur.putBoolean("estConnecte",true)
+            //editeur.apply()
             (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator).vibrate(1000)
         }
 
@@ -68,5 +78,9 @@ val auth= FirebaseAuth.getInstance()
         val intent=Intent(Intent.ACTION_DIAL,uri)
         startActivity(intent)
 
+    }
+
+    fun creationUtilisateur(view: View) {
+        startActivity(Intent(this,CreateUser::class.java))
     }
 }
