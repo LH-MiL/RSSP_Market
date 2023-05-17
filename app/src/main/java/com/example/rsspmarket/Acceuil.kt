@@ -23,8 +23,11 @@ class Acceuil : AppCompatActivity() {
         val progress=findViewById<ProgressBar>(R.id.progressChargement)
         val fichierShared = getSharedPreferences("RSSP", Context.MODE_PRIVATE)
         val isConnected = fichierShared.getBoolean("estConnecte", false)
-        //if (isConnected==false)
-        val intent=  Intent(this,Authentification::class.java)
+        val intent:Intent
+        if (isConnected==false)
+             intent=  Intent(this,Authentification::class.java)
+        else
+            intent=  Intent(this,Produit::class.java)
 
 
 

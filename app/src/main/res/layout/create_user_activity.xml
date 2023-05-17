@@ -87,6 +87,12 @@
             android:background="@drawable/arr_plan_arrondi"></Button>
 
     </LinearLayout>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageUser"
+        android:src="@drawable/icon_user"
+        android:layout_marginTop="20dp"></ImageView>
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"

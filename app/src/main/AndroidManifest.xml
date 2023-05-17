@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
@@ -23,12 +22,17 @@
         android:theme="@style/Theme.RSSPMarket"
         tools:targetApi="31">
         <activity
-            android:screenOrientation="portrait"
-            android:parentActivityName=".Authentification"
-            android:label="Création de l'utilisater"
-            android:name=".CreateUser"
+            android:label="Mon chariot"
+            android:name=".MonChariot"
             android:exported="false" />
         <activity
+            android:name=".CreateUser"
+            android:exported="false"
+            android:label="Création de l&apos;utilisater"
+            android:parentActivityName=".Authentification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:label="Produits"
             android:name=".Produit"
             android:exported="false" />
         <activity

@@ -33,17 +33,23 @@ lateinit var auth : FirebaseAuth
             val email=findViewById<EditText>(R.id.email).text.toString()
             val password=findViewById<EditText>(R.id.password).text.toString()
             auth=FirebaseAuth.getInstance()
-            auth.createUserWithEmailAndPassword(email,password)
+            auth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener {
-                    if(it.isSuccessful) Toast.makeText(this,"Yes",Toast.LENGTH_LONG).show()
+                    if(it.isSuccessful) {
+                        val sharedPref = getSharedPreferences("RSSP", Context.MODE_PRIVATE)
+                        val editeur = sharedPref.edit()
+                        editeur.putBoolean("estConnecte",true)
+                        editeur.apply()
+                        val intent=Intent(this,Produit::class.java)
+                        startActivity(intent)
+
+                    }
                     else Toast.makeText(this,it.exception.toString(),Toast.LENGTH_LONG).show()
+                    (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator).vibrate(1000)
                 }
 
-            //val sharedPref = getSharedPreferences("RSSP", Context.MODE_PRIVATE)
-            //val editeur = sharedPref.edit()
-            //editeur.putBoolean("estConnecte",true)
-            //editeur.apply()
-            (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator).vibrate(1000)
+
+
         }
 
     }
