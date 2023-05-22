@@ -2,18 +2,15 @@ package com.example.rsspmarket
 
 import android.content.Context
 import android.content.Intent
-import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Vibrator
-import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 
 class Authentification : AppCompatActivity() {
@@ -40,7 +37,7 @@ lateinit var auth : FirebaseAuth
                         val editeur = sharedPref.edit()
                         editeur.putBoolean("estConnecte",true)
                         editeur.apply()
-                        val intent=Intent(this,Produit::class.java)
+                        val intent=Intent(this,Produits::class.java)
                         startActivity(intent)
 
                     }

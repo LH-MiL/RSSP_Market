@@ -33,7 +33,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:label="Produits"
-            android:name=".Produit"
+            android:name=".Produits"
             android:exported="false" />
         <activity
             android:name=".Authentification"

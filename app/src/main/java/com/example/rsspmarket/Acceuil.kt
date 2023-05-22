@@ -3,11 +3,11 @@ package com.example.rsspmarket
 import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.CountDownTimer
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 
 class Acceuil : AppCompatActivity() {
     override fun onDestroy() {
@@ -27,7 +27,50 @@ class Acceuil : AppCompatActivity() {
         if (isConnected==false)
              intent=  Intent(this,Authentification::class.java)
         else
-            intent=  Intent(this,Produit::class.java)
+            intent=  Intent(this,Produits::class.java)
+
+
+        // Créer un Handler pour le thread principal
+
+        val monThread=object:Thread() {
+            override fun run() {
+                super.run()
+                Looper.prepare()
+
+
+                while (true) {
+                    object : CountDownTimer(1000L, 1000L) {
+                        override fun onTick(millisUntilFinished: Long) {
+
+                        }
+
+                        override fun onFinish() {
+
+                            Toast.makeText(applicationContext, "TRRRRRRRRRRRR", Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                    }.start()
+                }
+            }
+        }
+        monThread.start()
+            // Effectuer le travail en arrière-plan ici
+
+
+
+
+
+
+
+
+
+
+
+            // Envoyer un message au thread principal
+
+
+
+
 
 
 

@@ -11,6 +11,7 @@ class MonChariot : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.mon_chariot_activity)
 
+
         val fragmentAdapter=MonFragmentAdapter(supportFragmentManager)
         fragmentAdapter.addFragment(FragmentChariot1(),"Title1")
         fragmentAdapter.addFragment(FragmentChariot2(),"title2")
