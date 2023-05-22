@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
 class Produits : AppCompatActivity() {
@@ -32,9 +33,20 @@ class Produits : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.seDeconnecter) {
-        val auth=FirebaseAuth.getInstance()
-            auth.signOut()
-        startActivity(Intent(this,Authentification::class.java))
+
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Déconnexion")
+            builder.setMessage("Voulez vous vraiment quitter?")
+            builder.setPositiveButton("Oui") { dialog, which ->
+                val auth=FirebaseAuth.getInstance()
+                auth.signOut()
+                startActivity(Intent(this,Authentification::class.java))
+            }
+            builder.setNegativeButton("Non") { dialog, which ->
+                // rien à faire
+            }
+            builder.show()
+
         }
         if (item.itemId == R.id.monChariot) {
             startActivity(Intent(this,MonChariot::class.java))
